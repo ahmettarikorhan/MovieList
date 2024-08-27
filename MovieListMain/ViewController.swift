@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var myCollectionView:UICollectionView!
     
+    let ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YjYwOWQyNzE0ZTQxZGQ4ODczMWU1ZTRkMmRlOWY5NSIsIm5iZiI6MTcyNDc0NDUwOS4wODI5NzQsInN1YiI6IjY2Y2Q3ZmQ3MTNkNjg1ZGM3ZDlhYTcwOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2X6i_eFPfdm_J2-52wPBRzXHDzq5-klr8gYeKu6Dz2Q"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,33 @@ class ViewController: UIViewController {
             return
         }
         
+        var request = URLRequest(url:url)
+        request.addValue("application/json", forHTTPHeaderField: "ACCEPT")
+        request.addValue("Bearer \(ACCESS_TOKEN)", forHTTPHeaderField: "Authorization")
+        
         let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) {data,response,error in if let error = error {
+            print("ERROR WHİLE FETHİNG DATA: \(error)")
+            return
+        }
+            guard let data = data , let httpResponse = response as?
+                    HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("status code is not succesfull: response")
+                return
+            }
+            do{
+                let decoder = JSONDecoder()
+                let myData = try decoder.decode(TrendingMoviesResponseModel.self, from: data)
+                let firstMovie = myData.results[0]
+                print("data response movie title: \(firstMovie.title)")
+            }catch{
+                print("ERROR DECODİNG JSON: \(error)")
+            }
+            
+        }
+        task.resume()
+      
     }
     
     func getMoviesFromApi() async{
