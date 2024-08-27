@@ -13,6 +13,10 @@
 		043815312C64B70F0061467E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0438152F2C64B70F0061467E /* Main.storyboard */; };
 		043815332C64B7100061467E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043815322C64B7100061467E /* Assets.xcassets */; };
 		043815362C64B7100061467E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043815342C64B7100061467E /* LaunchScreen.storyboard */; };
+		0438153E2C74917D0061467E /* MovlieListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438153D2C74917D0061467E /* MovlieListModel.swift */; };
+		043815402C74B4540061467E /* MovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438153F2C74B4540061467E /* MovieCollectionCell.swift */; };
+		043815422C75DD840061467E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043815412C75DD840061467E /* DetailViewController.swift */; };
+		043815442C772D000061467E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043815432C772D000061467E /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		043815322C64B7100061467E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043815352C64B7100061467E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043815372C64B7100061467E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0438153D2C74917D0061467E /* MovlieListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovlieListModel.swift; sourceTree = "<group>"; };
+		0438153F2C74B4540061467E /* MovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionCell.swift; sourceTree = "<group>"; };
+		043815412C75DD840061467E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		043815432C772D000061467E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,11 @@
 				043815292C64B70F0061467E /* AppDelegate.swift */,
 				0438152B2C64B70F0061467E /* SceneDelegate.swift */,
 				0438152D2C64B70F0061467E /* ViewController.swift */,
+				043815412C75DD840061467E /* DetailViewController.swift */,
 				0438152F2C64B70F0061467E /* Main.storyboard */,
+				043815432C772D000061467E /* WebViewController.swift */,
+				0438153F2C74B4540061467E /* MovieCollectionCell.swift */,
+				0438153D2C74917D0061467E /* MovlieListModel.swift */,
 				043815322C64B7100061467E /* Assets.xcassets */,
 				043815342C64B7100061467E /* LaunchScreen.storyboard */,
 				043815372C64B7100061467E /* Info.plist */,
@@ -139,6 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0438152E2C64B70F0061467E /* ViewController.swift in Sources */,
+				043815402C74B4540061467E /* MovieCollectionCell.swift in Sources */,
+				0438153E2C74917D0061467E /* MovlieListModel.swift in Sources */,
+				043815422C75DD840061467E /* DetailViewController.swift in Sources */,
+				043815442C772D000061467E /* WebViewController.swift in Sources */,
 				0438152A2C64B70F0061467E /* AppDelegate.swift in Sources */,
 				0438152C2C64B70F0061467E /* SceneDelegate.swift in Sources */,
 			);
